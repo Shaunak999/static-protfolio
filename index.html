@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
+    
         * {
             margin: 0;
             padding: 0;
@@ -36,26 +42,70 @@
             list-style: none;
             margin: 0 23px;
         }
-        .left{
+        nav ul li a {
+            text-decoration:none;
+            color:white;
+        }
+        nav ul li a:hover{
+            color:lavender;
+            font-size:1.01rem;
+        }
+        .left {
             font-size: 1.5rem;
+            margin-left:200px;
         }
-        .first{
-            display:flex;
-            justify-content:space-around;
-            margin:23px 0;
+        .right{
+            margin-right:80px;
         }
-        .first div{
-        width:30%;
+        .first {
+            display: flex;
+            justify-content: space-around;
+            align-items:centre;
+            margin: 1.5vh 0;
         }
-        .leftSection{
-            background-color: rgb(214, 189, 152);
-            width:50px;
+        .first > div {
+            width: 30%;
         }
-                .rightSection{
+        .leftSection {
             background-color: 
-            width:50px;
+            padding: 20px;
+            font-size: 3rem;
+            margin:70px 0;
         }
-    </style> 
+        .rightSection {
+            background-color: 
+            padding: 20px;
+        }
+        .rightSection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+        .gradient {
+            background: radial-gradient(circle, rgb(222, 249, 196), rgb(156, 219, 166), rgb(80, 180, 152), rgb(70, 133, 133));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .font{
+             font-family: "Playfair Display", serif;
+             color: radial-gradient(circle, rgb(222, 249, 196), rgb(156, 219, 166), rgb(80, 180, 152), rgb(70, 133, 133));
+            -webkit-background-clip: text;
+            
+        }
+        .grey{
+            font-size:15px;
+            color:gray;
+        }
+        .second{
+            max-width:80vw;
+            margin:auto;
+            font-size:20px
+            height:80vh;
+        }
+        hr {
+            margin:55px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -65,30 +115,44 @@
                 Shaunak's Portfolio
             </div>
             <div class="right">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
+            <ul>
+             <li><a href="home.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+             <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+
             </div>
         </nav>
     </header>
 
     <main>
-    <section class='first'>
-    <div class='leftSection'>
-Hi,my name is Shaunak!
-<div>
-I am a web developer
-</div>
-    </div>
-    <div class='rightSection'>
-    <img src="dev.png"alt="">
-    </div>
-    </section>
+        <section class="first">
+            <div class="leftSection">
+                Hi, my name is <span class="gradient">Shaunak</span>
+                <div>
+                    I am a passionate 
+                </div>
+                <span id="element" class="font"></span>
+            </div>
+            <div class="rightSection">
+                <img src="dev.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="second">
+        <span class="grey">Things I'm good at</span>
+        <h1>Experties</h1>
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+   var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Blockchain dev', 'Video Editor'],
+      typeSpeed: 75,
+      
+    });
+  </script>
 </body>
-
 </html>
